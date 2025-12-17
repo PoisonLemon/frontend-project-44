@@ -5,3 +5,6 @@
 
 [View brain-even demo](https://asciinema.org/a/hAN6W7sqU7JAfds2pzMGU2zsv)
 [View brain-calc demo](https://asciinema.org/a/WMqzx31CrMr7AiUd6XWCd7VEj)
+[View brain-gcd demo](https://asciinema.org/a/6NZAkRKPcCtj5CpXw6RLqEAKs)
+[View brain-progression demo](https://asciinema.org/a/Y0NA88f4mT80fyJ3IvHWSji0I)
+[View brain-prime demo](https://asciinema.org/a/vfjnNoDNHdBEXp6uzhm2t9LyN)
