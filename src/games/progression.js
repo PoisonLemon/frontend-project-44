@@ -1,4 +1,4 @@
-import canvas from './index.js';
+import canvas from '../index.js';
 import { randomInt } from 'node:crypto';
 
 const generateRandomNumber = (min, max) => randomInt(min, max);
