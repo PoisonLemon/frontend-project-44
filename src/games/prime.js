@@ -1,13 +1,13 @@
 import canvas from '../index.js'
-import {randomInt} from 'node:crypto'
+import { randomInt, } from 'node:crypto'
 
-const generateRandomNumber = () => randomInt(1, 101)
+const generateRandomNumber = () => randomInt(1, 101,)
 
-export const isPrime = (num) => {
+export const isPrime = (num,) => {
   if (num <= 1) return false
   if (num === 2) return true
   if (num % 2 === 0) return false
-  for (let i = 3; i <= Math.sqrt(num); i += 2) {
+  for (let i = 3; i <= Math.sqrt(num,); i += 2) {
     if (num % i === 0) return false
   }
   return true
@@ -16,11 +16,11 @@ export const isPrime = (num) => {
 const generateRound = () => {
   const number = generateRandomNumber()
   const question = number.toString()
-  const correctAnswer = isPrime(number) ? 'yes' : 'no'
-  return [question, correctAnswer]
+  const correctAnswer = isPrime(number,) ? 'yes' : 'no'
+  return [question, correctAnswer,]
 }
 
 export default function runPrimeGame() {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-  canvas(description, generateRound)
+  canvas(description, generateRound,)
 }
