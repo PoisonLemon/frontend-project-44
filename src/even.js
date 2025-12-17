@@ -1,6 +1,6 @@
 
 const isEven = (num) => num % 2 === 0;
-const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
+const generateRandomNumber = () => randomInt(1, 101);
 
 export default  function Even() {
   const number = generateRandomNumber();

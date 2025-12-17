@@ -1,4 +1,6 @@
-const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
+import { randomInt } from 'crypto';
+
+const generateRandomNumber = () => randomInt(1, 101);
 
 const OPERATIONS = ['+', '-', '*'];
 const calculate = (num1, num2, operation) => {
@@ -17,7 +19,7 @@ const calculate = (num1, num2, operation) => {
 export default function Calc() {
   const num1 = generateRandomNumber();
   const num2 = generateRandomNumber();
-  const operation = OPERATIONS[Math.floor(Math.random() * OPERATIONS.length)];
+  const operation = OPERATIONS[randomInt(0, OPERATIONS.length)];
   const question = `${num1} ${operation} ${num2}`;
   const correctAnswer = String(calculate(num1, num2, operation));
   return [question, correctAnswer];
