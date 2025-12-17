@@ -14,7 +14,7 @@ const calculate = (num1, num2, operation) => {
   }
 };
 
-export default () => {
+export default function Calc() {
   const num1 = generateRandomNumber();
   const num2 = generateRandomNumber();
   const operation = OPERATIONS[Math.floor(Math.random() * OPERATIONS.length)];
