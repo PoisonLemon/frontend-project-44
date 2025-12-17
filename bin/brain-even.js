@@ -1,5 +1,5 @@
 #!/usr/bin/env node
+import runGame from '../src/index.js';
+import generateEvenRound from '../src/even.js';
 
-import runEvenGame from '../src/even.js';
-
-runEvenGame();
+runGame('Answer "yes" if the number is even, otherwise answer "no".', generateEvenRound);
