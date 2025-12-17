@@ -1,4 +1,4 @@
-import { randomInt } from 'crypto';
+import { randomInt } from 'node:crypto';
 
 const generateRandomNumber = () => randomInt(1, 101);
 
