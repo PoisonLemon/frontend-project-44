@@ -1,24 +1,29 @@
-import readlineSync from 'readline-sync'
+import js from '@eslint/js'
+import globals from 'globals'
+import stylistic from '@stylistic/eslint-plugin'
 
-const ROUNDS_COUNT = 3
-
-export default function canvas(description, generateRound) {
-  console.log('Welcome to the Brain Games!')
-  const name = readlineSync.question('May I have your name? ')
-  console.log(`Hello, ${name}!`)
-  console.log(description)
-
-  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const [question, correctAnswer] = generateRound()
-    console.log(`Question: ${question}`)
-    const userAnswer = readlineSync.question('Your answer: ')
-
-    if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
-      console.log(`Let's try again, ${name}!`)
-      return
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,mjs,cjs}'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser
+      }
+    },
+    plugins: {
+      '@stylistic': stylistic
+    },
+    rules: {
+      '@stylistic/semi': ['error', 'never'],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/comma-dangle': ['error', 'always'],
+      '@stylistic/object-curly-spacing': ['error', 'always'],
+      '@stylistic/eol-last': ['error', 'always'],
+      '@stylistic/arrow-parens': ['error', 'always'],
+      '@stylistic/no-multi-spaces': ['error']
     }
-    console.log('Correct!')
   }
-  console.log(`Congratulations, ${name}!`)
-}
+]
