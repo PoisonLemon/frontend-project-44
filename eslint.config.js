@@ -9,21 +9,21 @@ export default [
     languageOptions: {
       globals: {
         ...globals.node,
-        ...globals.browser
-      }
+        ...globals.browser,
+      },
     },
     plugins: {
-      '@stylistic': stylistic
+      '@stylistic': stylistic,
     },
     rules: {
       '@stylistic/semi': ['error', 'never'],
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/indent': ['error', 2],
-      '@stylistic/comma-dangle': ['error', 'never'],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/object-curly-spacing': ['error', 'always'],
       '@stylistic/eol-last': ['error', 'always'],
       '@stylistic/arrow-parens': ['error', 'as-needed'],
-      '@stylistic/no-multi-spaces': ['error']
-    }
-  }
+      '@stylistic/no-multi-spaces': ['error'],
+    },
+  },
 ]
